@@ -1,8 +1,5 @@
 #Find the number of entries which are not divisible by 7 in the first one billion (10^9) rows of Pascal's triangle.
 
-# vars
-num_rows = 10**9
-
 # functions
 def int2(n, base):
     ret = []
@@ -19,7 +16,18 @@ def f(l, base):
     s = base * (base+1) // 2
     return r * (r+1) // 2 * s **(len(l)-1) + (r+1) * f(l[1:], base)
 
+     
+# vars
+num_rows = 10**9
+base = 7
+nondivisors = f(int2(num_rows, 7), 7))
+
+# Checks the percentage of the number of entries not divisible by num_rows
+def check_percentage(num_nondivisors):
+    percentage = [num_rows / nondivisors]
+    return percentage
 
 # prints
 # 
+print("This is the percentage of numbers within the first " + str(num_rows) + " rows that are not divisble by " +  + str(percentage)
 print(f(int2(num_rows, 7), 7))
