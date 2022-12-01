@@ -28,6 +28,6 @@ def check_percentage(num_nondivisors):
     return percentage
 
 # prints
-# 
-print("This is the percentage of numbers within the first " + str(num_rows) + " rows that are not divisble by " +  + str(percentage)
+# Prints the percentage of the number of entires not divisible by num_rows and the rounded version of the percentage
+print("This is the percentage of numbers within the first " + str(num_rows) + " rows that are not divisble by " + str(base) + ": " + str(percentage) + "%" \n "Rounded: " + percentage.round(3))
 print(f(int2(num_rows, 7), 7))
