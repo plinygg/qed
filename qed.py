@@ -1,7 +1,7 @@
 #Find the number of entries which are not divisible by 7 in the first one billion (10^9) rows of Pascal's triangle.
 
 # vars
-num_rows = 4
+num_rows = 10**9
 
 # functions
 def int2(n, base):
