@@ -1,10 +1,9 @@
-#Find the number of entries which are not divisible by 7 in the first one billion (10^9) rows of Pascal's triangle.
+#Project Euler Problem #148:
+# Find the number of entries which are not divisible by 7 in the first one billion (10^9) rows of Pascal's triangle.
 
 # vars
 num_rows = 10**9
 base = 7
-
-
 
 # functions
 
@@ -14,6 +13,7 @@ def converting_bases(n, p):
     while n != 0:
         n, k = n//p, n%p
         num_in_base_p.insert(0, k)
+        # print(num_in_base_p)
     return num_in_base_p
 
 def f(l, base):
@@ -27,7 +27,7 @@ def f(l, base):
 # Checks the percentage of the number of entries not divisible by base in num_rows and adds them to a list
 percentage = []
 def check_percentage(num_nondivisors):
-    percentage.append(num_rows / nondivisors)
+    percentage.append(nondivisors / num_rows)
     # print(percentage[0])
     # print(round(percentage[0], 0))
 
@@ -42,6 +42,17 @@ check_percentage(nondivisors)
 print(f(converting_bases(num_rows, base), base))
 
 # Prints the percentage of the number of entries not divisible by num_rows and the rounded version of the percentage
-print("This is the percentage of numbers within the first " + str(ez_nums) + " rows that are not divisble by " + str(base) + "(rounded): " + str(round(percentage[0])) + "%")
+# how do you find the total number of entries in the first num_rows rows?
+print("Percentage of numbers within the first " + str(ez_nums) + " rows that are not divisble by " + str(base) + "(rounded): " + str(round(percentage[0])) + "%")
 print("Number of entries which are not divisible by " + str(base) + " in the first " + str(ez_nums) + " rows of Pascal's triangle: " + str(ez_nondivisors))
 
+
+# p = 12
+# # p, r = p+2, p+4
+# # print(p)
+# # print(r)
+
+# p = p+2
+# r=p+4
+# print(p)
+# print(r)
