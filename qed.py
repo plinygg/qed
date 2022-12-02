@@ -49,6 +49,7 @@ ez_nondivisors = ("{:,}".format(nondivisors))
 # running code
 check_percentage(nondivisors)
 print(f(converting_bases(num_rows, base), base))
+print(total_entries)
 
 # Prints the percentage of the number of entries not divisible by num_rows and the rounded version of the percentage
 # how do you find the total number of entries in the first num_rows rows?
