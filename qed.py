@@ -51,6 +51,7 @@ ez_nondivisors = ("{:,}".format(nondivisors))
 
 # running code
 check_percentage(nondivisors)
+elements_n_rows(n)
 print(f(converting_bases(num_rows, base), base))
 print(total_entries)
 
