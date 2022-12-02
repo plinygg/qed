@@ -1,4 +1,4 @@
-#Project Euler Problem #148:
+Project Euler Problem #148:
 # Find the number of entries which are not divisible by 7 in the first one billion (10^9) rows of Pascal's triangle.
 
 # vars
@@ -33,13 +33,12 @@ def elements_n_rows(n):
 #     Triangular formula
     total_entries.append(triangular)
     return triangular
-print("total entries: " + str(total_entries)
 
 # Checks the percentage of the number of entries not divisible by base in num_rows and adds them to a list
-
+elements_n_rows(num_rows)
 percentage = []
 def check_percentage(num_nondivisors):
-    percentage.append(nondivisors / total_entries)
+    percentage.append(nondivisors / total_entries[0])
     # print(percentage[0])
     # print(round(percentage[0], 0))
 
@@ -51,15 +50,17 @@ ez_nondivisors = ("{:,}".format(nondivisors))
 
 # running code
 check_percentage(nondivisors)
-elements_n_rows(n)
 print(f(converting_bases(num_rows, base), base))
 print(total_entries)
+print(percentage)
+print(round(percentage[0], 3))
 
 # Prints the percentage of the number of entries not divisible by num_rows and the rounded version of the percentage
 # how do you find the total number of entries in the first num_rows rows?
-print("Percentage of numbers within the first " + str(ez_nums) + " rows that are not divisble by " + str(base) + "(rounded): " + str(round(percentage[0])) + "%")
+print("Percentage of numbers within the first " + str(ez_nums) + " rows that are not divisble by " + str(base) + "(rounded): " + str(round(percentage[0], 3)) + "%")
 print("Number of entries which are not divisible by " + str(base) + " in the first " + str(ez_nums) + " rows of Pascal's triangle: " + str(ez_nondivisors))
 
+# print("total entries: " + str(total_entries))
 
 # p = 12
 # # p, r = p+2, p+4
