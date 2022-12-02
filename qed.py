@@ -20,14 +20,16 @@ def f(l, base):
 # vars
 num_rows = 10**9
 base = 7
-nondivisors = f(int2(num_rows, 7), 7))
+nondivisors = f(int2(num_rows, 7), 7)
 
-# Checks the percentage of the number of entries not divisible by num_rows
+
+# Checks the percentage of the number of entries not divisible by num_rows and adds them to a list
+percentage = []
 def check_percentage(num_nondivisors):
-    percentage = [num_rows / nondivisors]
-    return percentage
+    percentage.append(num_rows / nondivisors)
+    
 
 # prints
 # Prints the percentage of the number of entires not divisible by num_rows and the rounded version of the percentage
-print("This is the percentage of numbers within the first " + str(num_rows) + " rows that are not divisble by " + str(base) + ": " + str(percentage) + "%" \n "Rounded: " + percentage.round(3))
+print("This is the percentage of numbers within the first " + str(num_rows) + " rows that are not divisble by " + str(base) + ": " + str(percentage) + "%" + "Rounded: " + str(round(percentage[0], 3)) + "%")
 print(f(int2(num_rows, 7), 7))
