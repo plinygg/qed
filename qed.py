@@ -24,10 +24,19 @@ def f(l, base):
     s = base * (base+1) // 2
     return first_val * (first_val+1) // 2 * s **(len(l)-1) + (first_val+1) * f(l[1:], base)
 
+# This function uses the triangular formula to find out the number of entries in the first n rows of Pascal’s triangle.
+total_entries = []
+def elements_n_rows(n):
+    triangular = (n(n+1)) / 2
+#                    ^^^
+#     Triangular formula
+    total_entries.append(triangular)
+    return triangular
+
 # Checks the percentage of the number of entries not divisible by base in num_rows and adds them to a list
 percentage = []
 def check_percentage(num_nondivisors):
-    percentage.append(nondivisors / num_rows)
+    percentage.append(nondivisors / total_entries)
     # print(percentage[0])
     # print(round(percentage[0], 0))
 
