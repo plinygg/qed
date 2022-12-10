@@ -1,18 +1,32 @@
-M = 10**9
+base = 7
 
-def int2(n, base):
-    ret = []
+def converting_bases(n, p):
+    num_in_base_p = []
     while n != 0:
-        n, k = n//base, n%base
-        ret.insert(0, k)
-    return ret
+        n, k = n//p, n%p
+        num_in_base_p.insert(0, k)
+    return num_in_base_p
 
-def f(l, base):
-    if not l: return 0
-    r = l[0]
-    if r == 0: return f(l[1:], base)
-    if r < base: r*(r+1)//2
-    s = base*(base+1)//2
-    return r*(r+1)//2*s**(len(l)-1)+(r+1)*f(l[1:], base)
 
-print(f(int2(M, 7), 7))
+# finds the number of entries not divisible in row n in base p
+def numnotdivisible(rownumbase):
+    product = 1
+    for digit in rownumbase:
+        product = product * (digit + 1)
+    return product
+
+# print(numnotdivisible([2]))
+
+
+def sumrownotdivisible(num_rows):
+    sum = 0
+    for row in list(range(0, num_rows + 1)):
+        # print(row)
+        numinbasep = converting_bases(row, base)
+        numnotdivis = numnotdivisible(numinbasep)
+        sum = sum + numnotdivis
+        # print(sum)
+    
+    return sum
+
+print(sumrownotdivisible(6))
